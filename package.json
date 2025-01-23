@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Bootcamp-Arkusnexus/Backend#readme",
   "dependencies": {
     "express": "^4.21.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pg": "^8.13.1"
   }
 }
