@@ -24,8 +24,8 @@ CREATE TABLE employees_history (
     company_exit_date DATE,
     entry_type_details TEXT
 );
-INSERT INTO employees_history (is_active_arkus, is_active_mind, full_name, role, level, cv_link, tech_profile_1,entry_type, mt_entry_date, mt_exit_date, business_days_in_mt, office_location,city_of_residence, time_zone, assigned_account_or_clients, english_level, mt_exit_projection_date, base_income_money, tech_profile_2, mt_validated, company_exit_type, company_exit_date, entry_type_details) VALUES 
- (FALSE, TRUE, 'Alice Johnson', 'Developer', 'Mid', 'http://example.com/cv/alice', 
+INSERT INTO employees_history (is_active_arkus, is_active_mind, full_name, role, level, cv_link, tech_profile_1,entry_type, mt_entry_date, mt_exit_date, business_days_in_mt, office_location,city_of_residence, time_zone, assigned_account_or_clients, english_level, mt_exit_projection_date, base_income_money, tech_profile_2, mt_validated, company_exit_type, company_exit_date, entry_type_details) VALUES VALUES (FALSE, TRUE, 'Alvaro Munoz', 'Developer', 'Mid', 'http://arkusnexus.com','JavaScript', 'Internal Transfer', '2023-01-10', NULL, 220, 'Tijuana HQ', 'Tecate', 'EST', 'Client A', 'C1', NULL, 10000.00, 'React', 'Yes', NULL, NULL, NULL),
+(FALSE, TRUE, 'Alice Johnson', 'Developer', 'Mid', 'http://example.com/cv/alice', 
  'JavaScript', 'Internal Transfer', '2023-01-10', NULL, 220, 'HQ', 'New York', 'EST', 
  'Client A', 'C1', NULL, 50000.00, 'React', 'Yes', NULL, NULL, NULL),
  (TRUE, FALSE, 'Bob Smith', 'Product Manager', 'Senior', 'http://example.com/cv/bob', 
@@ -109,4 +109,3 @@ INSERT INTO employees_history (is_active_arkus, is_active_mind, full_name, role,
 --     ('Eduardo de Anda', 'edeanda@arkusnexus.com'), 
 --     ('Alvaro Munoz', 'amunoz@arkusnexus.com'), 
 --     ('Fernanda Gonzalez', 'mgonzalez@arkusnexus.com');
-
