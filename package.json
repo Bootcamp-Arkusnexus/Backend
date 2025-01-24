@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Bootcamp-Arkusnexus/Backend#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2",
     "morgan": "^1.10.0",
     "pg": "^8.13.1"

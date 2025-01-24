@@ -28,9 +28,6 @@ export const createUser = async (req, res) => {
     const data = req.body;
     console.log(data);
     const { rows } = await pool.query(
-      //   "INSERT INTO employees_history (name, email) VALUES ($1, $2) RETURNING *",
-      //   [data.name, data.email]
-
       "INSERT INTO employees_history ( is_active_arkus, is_active_mind, full_name, role, level, cv_link, tech_profile_1, entry_type, mt_entry_date, mt_exit_date, business_days_in_mt, office_location, city_of_residence, time_zone, assigned_account_or_clients, english_level, mt_exit_projection_date, base_income_money, tech_profile_2, mt_validated, company_exit_type, company_exit_date, entry_type_details) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23) RETURNING *",
       [
         data.is_active_arkus,
@@ -59,8 +56,6 @@ export const createUser = async (req, res) => {
       ]
     );
     //   console.log(rows);
-
-    //   res.send(`User: ${data.name}, ${data.email} was created`);
     res.json(rows); //
   } catch (error) {
     console.log(error);
