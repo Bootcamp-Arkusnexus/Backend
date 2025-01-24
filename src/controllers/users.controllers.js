@@ -3,7 +3,7 @@ import { pool } from "../db.js";
 export const getUsers = async (req, res) => {
   const { rows } = await pool.query("SELECT * FROM employees_history");
   //   console.log(rows);
-  res.json(rows);
+  res.json({message:'Full user list', rows});
   //   res.send("Getting users");
 };
 
@@ -15,7 +15,7 @@ export const getUserByID = async (req, res) => {
   //   const { rows } = await pool.query("SELECT * FROM users WHERE id = $1", [
   //     userID,
   //   ]);
-  //   res.send(`Get user id: ${userID}`);
+    // res.send(`Get user id: ${userID}`);
   // When client get an ID that doesn't exist
   if (rows.length === 0) {
     return res.status(404).json({ message: "User not found or doens't exist" });
@@ -56,12 +56,13 @@ export const createUser = async (req, res) => {
       ]
     );
     //   console.log(rows);
-    res.json(rows); //
+    res.json({message: 'User was created successful', rows}); //
+    // console.log(`User created ${rows.full_name}`)
   } catch (error) {
     console.log(error);
     // When user email already exists this line show an Error
     if (error?.code === "23505") {
-      return res.status(409).json({ message: "Email already exists" });
+      return res.status(409).json({ message: "This user already exists" });
     }
     return res.status(500).json({ message: "Internal server error" });
   }
