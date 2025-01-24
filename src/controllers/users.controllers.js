@@ -3,7 +3,7 @@ import { pool } from "../db.js";
 export const getUsers = async (req, res) => {
   const { rows } = await pool.query("SELECT * FROM employees_history");
   //   console.log(rows);
-  res.json({message:'Full user list', rows});
+  res.json(rows);
   //   res.send("Getting users");
 };
 
